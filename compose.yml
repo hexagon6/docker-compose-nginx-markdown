@@ -1,0 +1,13 @@
+services:
+  nginx-mk:
+    image: nginx-mk
+    build:
+      context: .
+    ports:
+      - 80:80
+    volumes:
+      - ./public:/var/www/html/
+    restart: unless-stopped
+
+volumes:
+  httpd-docs:
