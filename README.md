@@ -19,3 +19,13 @@ This repo provides a docker compose setup for running nginx with a markdown conv
 1. modify the volume location inside compose.yml
 2. run `docker compose up -d`
 3. add .md files to your volume for pages
+
+## why?
+
+I wanted to run [https://nginx-extras.getpagespeed.com/modules/markdown/](https://nginx-extras.getpagespeed.com/modules/markdown/#build-with-cmark-gfm-tables-support) but did not find a compiled version for ubuntu / debian, as I like to use docker compose and went through all the compilation steps I thought maybe someone else could find this useful.
+
+## possible improvements
+
+- Docker image size optimization
+  - remove downloaded apt cache after package installation
+  - use separate build & run images
